@@ -1,0 +1,28 @@
+{
+  "name": "treslek-what",
+  "version": "1.0.0",
+  "description": "A treslek plugin for people who like whats.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purdyk/treslek-what.git"
+  },
+  "keywords": [
+    "treslek",
+    "irc",
+    "schonstal"
+  ],
+  "author": "Kevin Purdy <justin.gallardo@gmail.com>",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/purdyk/treslek-what/issues"
+  },
+  "homepage": "https://github.com/purdyk/treslek-what",
+  "dependencies": {
+    "logmagic": "^0.1.4",
+    "random-js": "1.0.8"
+  }
+}
