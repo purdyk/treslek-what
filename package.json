@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/purdyk/treslek-what",
   "dependencies": {
-    "logmagic": "^0.1.4",
-    "random-js": "1.0.8"
+    "logmagic": "^0.1.4"
   }
 }

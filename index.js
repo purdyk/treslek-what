@@ -1,8 +1,6 @@
 var log = require('logmagic').local('treslek.plugins.what');
 var config = require('./config.json');
 var whatReg = /what/;
-var Random = require('random-js');
-var engine = Random.engines.mt19937().autoSeed();
 
 var channelUsers = {}
 
@@ -23,20 +21,22 @@ What.prototype.what = function (bot, to, from, msg, callback) {
     return;
   }
 
-  if (config.channels.indexOf(to) == -1) {
+  if (config.channels.indexOf(to) === -1) {
     callback();
     return;
   }
 
+  log.info("Found a what on an enabled channel: " + to);
+
   for (var i = 0; i < config.users.length; i++) {
-    if (channelUsers[to][config.users[i]]) {
-      var what = Random.pick(engine, config.whats);
+    var user = config.users[i];
+    if (channelUsers[to][user]) {
+      var what = config.whats[Math.floor(Math.random() * config.whats.length)];
       bot.say(to, user + ": " + what);
     }
   }
 
   callback();
-
 }
 
 exports.Plugin = What;
