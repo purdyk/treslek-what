@@ -1,6 +1,6 @@
 {
   "name": "treslek-what",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A treslek plugin for people who like whats.",
   "main": "index.js",
   "scripts": {
